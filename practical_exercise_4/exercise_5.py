@@ -6,6 +6,21 @@ def light_up_four_corners():
     blue = (0,0,255)
     yellow = (255,255,0)
     sense = SenseHat()
+    sense.set_pixel(0,0,red)
+    sense.set_pixel(0,7,green)
+    sense.set_pixel(7,7,blue)
+    sense.set_pixel(7,0,yellow)
+    time.sleep(1)
+    sense.clear()
+
+light_up_four_corners()
+
+def random_display():
+    red = (255,0,0)
+    green = (0,255,0)
+    blue = (0,0,255)
+    yellow = (255,255,0)
+    sense = SenseHat()
     sense.set_pixel(random.randint(0,7),random.randint(0,7),red)
     sense.set_pixel(random.randint(0,7),random.randint(0,7),green)
     sense.set_pixel(random.randint(0,7),random.randint(0,7),blue)
@@ -13,7 +28,7 @@ def light_up_four_corners():
     time.sleep(1)
     sense.clear()
 
-#light_up_four_corners()
+random_display()
 
 def display_image():
     sense = SenseHat()
@@ -94,4 +109,4 @@ def accelerometer_game():
         time.sleep(1)
         sense.clear()
         time.sleep(1)
-accelerometer_game()
+#accelerometer_game()
