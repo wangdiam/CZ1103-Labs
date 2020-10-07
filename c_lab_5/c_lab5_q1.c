@@ -68,4 +68,13 @@ int readin(PhoneBk *pb) {
 	return i;
 }
 void search(PhoneBk *pb, int size, char *target) {
-    /* Write your code here */ }
+    /* Write your code here */ 
+	for (int i=0;i<size;i++) {
+		if (strcmp(pb[i].name,target)==0) {
+			printf("Name: %s, Telno: %d\n",pb[i].name,pb[i].telno);
+			return;
+		}
+	}
+	printf("Name can't be found\n");
+	return;
+}
