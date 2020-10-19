@@ -78,3 +78,4 @@ void search(PhoneBk *pb, int size, char *target) {
 	printf("Name can't be found\n");
 	return;
 }
+
